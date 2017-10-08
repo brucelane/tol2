@@ -1,0 +1,94 @@
+<html>
+    <head>
+      <title>Tolérance 2.0</title>
+      <script src="lib/aframe-master.min.js"></script>
+      <script src="lib/aframe-look-at-component.min.js"></script>
+    </head>
+    <body>
+      <a-scene>
+        <a-assets>
+            <img id="g0" src="assets/photos/7.jpg">      
+            <img id="g1" src="assets/photos/7.jpg">      
+            <img id="g2" src="assets/photos/7.jpg">      
+            <img id="g3" src="assets/photos/7.jpg">      
+            <img id="g4" src="assets/photos/7.jpg">      
+            <img id="g5" src="assets/photos/7.jpg">      
+            <img id="g6" src="assets/photos/7.jpg">      
+            <img id="g7" src="assets/photos/7.jpg">   
+            <video id="videosphere" autoplay loop="true" src="assets/videos/videosphere.mp4">                
+          </a-assets>
+        <a-sky color="#110022" create-scene></a-sky>
+        <a-videosphere src="#videosphere"></a-videosphere>
+        <a-camera id="camera" camera look-controls>
+          <a-cursor id="cursor" color="#FF0000"></a-cursor>
+        </a-camera>
+      </a-scene>
+    </body>
+    <script>
+      AFRAME.registerComponent('create-scene', {
+  
+        init: function () {
+          var x, z;
+          var angle;
+          var radius = 3;
+          var maxImages = 8;
+          var fileName;
+          var folder = 'assets/photos/';
+          var sceneEl = document.querySelector('a-scene');
+          
+          var id = setInterval(frame, 20);
+          var done = false;
+          var i = 0;
+          function frame() {
+            if (done) {
+              // console.log('setInterval DONE');
+              clearInterval(id);
+            } else {  
+                var jpgImg = document.querySelector('#g' + i);
+                jpgImg.src = folder + i + '.jpg';
+                fileName = i + '.jpg';
+                angle = i * (2.0 * Math.PI / maxImages);
+                x = Math.cos(angle) * radius;
+                z = Math.sin(angle) * radius;
+                var aboxEl = document.createElement('a-box');
+                aboxEl.setAttribute('look-at', '#camera');
+                aboxEl.setAttribute('id', 'b' + i);
+                aboxEl.setAttribute('material', 'src:#g' + i + ';color:white;opacity:.8; alphaTest: 0.5; side: double');
+                aboxEl.setAttribute('position', x + ' 1.5 ' + z);
+                aboxEl.setAttribute('scale', '1.6 1.6 0.08');
+  
+                aboxEl.addEventListener( 'click', function ( )
+                {
+                  // zoom camera TODO
+                    // console.log('click' + this.id);
+                } );
+                aboxEl.addEventListener( 'mouseenter', function ( )
+                {
+                    // console.log('mouseenter ' + this.getAttribute('position').x);
+                    this.setAttribute( 'scale', {x: 2.6, y: 2.6, z: 0.08} );
+                    this.setAttribute( 'material', { opacity: 1.0} );
+                } );
+                aboxEl.addEventListener( 'mouseleave', function ( )
+                {
+                    this.setAttribute( 'scale', {x: 1.0, y: 1.0, z: 0.08} );
+                    this.setAttribute( 'material', { opacity: 0.8} );       
+                } );
+                sceneEl.appendChild(aboxEl);
+              i++;
+              if (i >= maxImages) done = true;
+            }
+          }
+        }
+      });
+  
+    </script>
+    <!-- Google Analytics -->
+    <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-28615615-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->  
+  
+  </html>
