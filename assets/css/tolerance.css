@@ -1,0 +1,56 @@
+
+  .img-responsive {
+      margin: 0 auto;
+  }
+  
+  /* ============
+      Carousel
+     ============ */
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+  
+  /* ==========
+      Btn
+     ========== */
+  .btn-circle {
+    width: 70px;
+    height: 70px;
+    margin-top: 15px;
+    padding: 7px 16px;
+    border: 2px solid white;
+    border-radius: 100% !important;
+    font-size: 40px;
+    color: white;
+    background: transparent;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
+    position: relative;
+    top: 40px;
+    left: -4px;
+  }
+  @media (min-width: 768px) {
+    .btn-circle {
+      top: 75px;
+    }
+  }
+  .btn-circle:hover,
+  .btn-circle:focus {
+    outline: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+/* photos */
+.photos-section {
+    
+}
+.photos-header {
+
+}
+.photos-body {
+    margin: 20px;
+}
