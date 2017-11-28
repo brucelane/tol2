@@ -46,11 +46,14 @@
   
 /* photos */
 .photos-section {
-  justify-content: center;
 }
 .photos-header {
-  justify-content: center;
 }
 .photos-body {
-    margin: 20px;
+    
 }
+/*
+.myCarousel {
+  display: flex;
+  justify-content: center;
+} */
