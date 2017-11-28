@@ -46,10 +46,10 @@
   
 /* photos */
 .photos-section {
-    
+  justify-content: center;
 }
 .photos-header {
-
+  justify-content: center;
 }
 .photos-body {
     margin: 20px;
