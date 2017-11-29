@@ -8,7 +8,7 @@
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Site officiel Tolerance2">
-    
+
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css">
     <!-- Custom CSS -->
@@ -77,23 +77,25 @@
                 <div class="feature col-lg-12">
                     <h2>
                         <img width="125" src="assets/slv.jpg" alt="Logo SLV" /> présente "Tolérance 2.0"</h2>
+                    <h2>Faire de l'Internet un lieu de bienveillance</h2>
+                    <img width="697" src="assets/vousetesbienici.png" alt="Vous êtes bien ici" />
                 </div>
-                
-                <img width="697" src="assets/vousetesbienici.png" alt="Vous êtes bien ici" />
-                <p>video de la semaine</p>
-                <h5>Faire de l'Internet un lieu de bienveillance</h5>
-                <p>
-                    <a href="https://www.youtube.com/channel/UCdZpNMWn7CixRVq2TSLNokg" title="Tolérance sur Youtube" target="_blank" class="btn btn-default btn-lg">
-                        <span class="fa fa-youtube "></span>
-                    </a>
-                    Abonnez vous sur notre chaîne Youtube Tolérance 2.0
-                </p>
-                <p>
-                    <a href="https://www.facebook.com//" title="Tolérance sur Facebook" target="_blank" class="btn btn-default btn-lg">
-                        <span class="fa fa-facebook "></span>
-                    </a>
-                    Suivez-nous sur Facebook
-                </p>
+
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://www.youtube.com/channel/UCdZpNMWn7CixRVq2TSLNokg" title="Tolérance sur Youtube" target="_blank" class="btn">
+                            <img width="100" src="assets/youtube.jpg" alt="Abonnez vous sur notre chaîne Youtube Tolérance 2.0" />
+                        </a>
+                        Abonnez vous sur notre chaîne Youtube.
+                    </div>
+                    <div class="col-md-6">
+                        <a href="https://www.facebook.com//" title="Tolérance sur Facebook" target="_blank" class="btn">
+                            <img width="100" src="assets/facebook.jpg" alt="Suivez-nous sur Facebook" />
+                        </a>
+                        Suivez-nous sur Facebook.
+                    </div>
+                </div>
                 <!-- .feature -->
             </div>
             <!-- .accueil-body -->
@@ -107,8 +109,9 @@
             </div>
             <!-- videos-header -->
             <div class="videos-body container">
+                <p>Vidéo de la semaine</p>
                 <div class="vendor">
-                    <iframe width="560" height="315" src="https://www.youtube.com/channel/UCdZpNMWn7CixRVq2TSLNokg" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/2Em0-qFgi-8?rel=0" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <!-- .vendor -->
             </div>
@@ -248,6 +251,7 @@
                 <img width="200" src="assets/fdva200.jpg" alt="Logo fdva">
                 <img width="200" src="assets/canope200.jpg" alt="Logo Canopé">
                 <img width="200" src="assets/act200.jpg" alt="Logo Auto-Car Transfert">
+                <img width="200" src="assets/nadegeraco200.jpg" alt="Logo Nadège Raco">
                 <!-- logos nadege ruco centresocial -->
         </section>
 
@@ -345,43 +349,43 @@
 
              .liens-body -->
         </section>
-               <!-- jQuery -->
-               <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 
-               <!-- Plugin JavaScript -->
-               <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-       
-               <!-- Bootstrap Core JavaScript -->
-               <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-       
-               <script>
-                   // jQuery for page scrolling feature - requires jQuery Easing plugin
-                   $(function() {
-                       $('body').on('click', '.page-scroll a', function(event) {
-                           var $anchor = $(this);
-                           $('html, body').stop().animate({
-                               scrollTop: $($anchor.attr('href')).offset().top
-                           }, 1500, 'easeOutBounce');
-                           event.preventDefault();
-                       });
-                   });
-       
-                   // Highlight the top nav as scrolling occurs
-                   $('body').scrollspy({
-                       target: '.navbar-fixed-top'
-                   })
-       
-                   // Closes the Responsive Menu on Menu Item Click
-                   $('.navbar-collapse ul li a:not(.dropdown-toggle)').click(function() {
-                       $('.navbar-toggle:visible').click();
-                   });
-               </script>
-       
-               <!-- Fitvids -->
-               <script src="js/jquery.fitvids.min.js"></script>
-               <script>
-                   $(".container").fitVids();
-               </script>
+        <!-- Plugin JavaScript -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+        <script>
+            // jQuery for page scrolling feature - requires jQuery Easing plugin
+            $(function () {
+                $('body').on('click', '.page-scroll a', function (event) {
+                    var $anchor = $(this);
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top
+                    }, 1500, 'easeOutBounce');
+                    event.preventDefault();
+                });
+            });
+
+            // Highlight the top nav as scrolling occurs
+            $('body').scrollspy({
+                target: '.navbar-fixed-top'
+            })
+
+            // Closes the Responsive Menu on Menu Item Click
+            $('.navbar-collapse ul li a:not(.dropdown-toggle)').click(function () {
+                $('.navbar-toggle:visible').click();
+            });
+        </script>
+
+        <!-- Fitvids -->
+        <script src="js/jquery.fitvids.min.js"></script>
+        <script>
+            $(".container").fitVids();
+        </script>
         <!-- Google analytics -->
         <script>
             (function (i, s, o, g, r, a, m) {
